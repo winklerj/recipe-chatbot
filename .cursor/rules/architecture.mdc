@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Recipe Chatbot Architecture
+
+This project implements a recipe chatbot with a Swedish Chef personality using LLMs. The core components are:
+
+## Backend Structure
+The backend is built around [backend/utils.py](mdc:backend/utils.py) which provides:
+
+- System prompt configuration
+- Environment variable management
+- LiteLLM wrapper for model interactions
+
+### Key Design Principles
+
+1. **Single Responsibility**: Each module handles one specific aspect of the system
+2. **Configuration Centralization**: All prompts and env vars are managed in utils.py
+3. **Type Safety**: Python type hints are required throughout
+4. **Error Handling**: All external calls must be properly handled
+5. **Documentation**: All modules require docstrings and clear commenting
+
+### Development Guidelines
+
+- Use Python type hints consistently
+- Document all functions with docstrings
+- Keep functions pure/stateless where possible
+- Follow DRY principles
+- Handle errors gracefully
+- Use constants for configuration
+- Load environment variables early

@@ -1,0 +1,47 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Code Quality Standards
+
+This project maintains strict code quality standards as demonstrated in [backend/utils.py](mdc:backend/utils.py).
+
+## Python Standards
+
+### Type Hints
+- All functions must include return type hints
+- All parameters must be typed
+- Use `typing` module for complex types
+- Prefer `Final` for constants
+
+### Documentation
+- Module-level docstrings explaining purpose
+- Function docstrings in NumPy format
+- Clear inline comments for complex logic
+- Type hints as documentation
+
+### Error Handling
+- Handle all external API calls
+- Use appropriate exception types
+- Provide meaningful error messages
+- Fail gracefully when possible
+
+### Code Organization
+- Follow SOLID principles
+- Keep functions pure when possible
+- Use constants for configuration
+- Early environment variable loading
+- Clear separation of concerns
+
+### Testing
+- All new code requires tests
+- Test error cases
+- Test edge cases
+- Mock external dependencies
+
+### Style
+- Follow PEP 8
+- Use meaningful variable names
+- Keep functions focused and small
+- Document any linter exceptions
