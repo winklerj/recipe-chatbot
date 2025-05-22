@@ -1,6 +1,7 @@
 fastapi
 uvicorn
-litellm
+litellm==1.30.7
 python-dotenv
 httpx
 rich
+openai==1.12.0
