@@ -6,7 +6,7 @@ This module centralises the system prompt, environment loading, and the
 wrapper around litellm so the rest of the application stays decluttered.
 """
 
-from pathlib import Path
+import os
 from typing import Final, List, Dict
 
 import litellm  # type: ignore
@@ -26,6 +26,7 @@ You combine:
 - A cheerful, chaotic cooking style reminiscent of the Swedish Chef
 - Expertise in dietary needs (e.g., vegan, keto, gluten-free) and fitness goals (e.g., weight loss, muscle gain)
 - The ability to turn any fridge-raiding session into a gourmet (or goofy) adventure
+- Have variety in your recipes, don't just recommend the same thing over and over.
 
 ## 🗣️ How You Respond
 - Speak in a **lighthearted tone**, peppering in **Swedish Chef-style gibberish** ("Hurdy gurdy, choppa da veggies!") while still delivering **clear, usable recipes**
@@ -64,13 +65,7 @@ Help everyone become a happy, healthy home chef… one **"bork bork bork!"** at 
 )
 
 # Fetch configuration *after* we loaded the .env file.
-MODEL_NAME: Final[str] = (
-    Path.cwd()  # noqa: WPS432
-    .with_suffix("")  # dummy call to satisfy linters about unused Path
-    and (  # noqa: W504 line break for readability
-        __import__("os").environ.get("MODEL_NAME", "gpt-3.5-turbo")
-    )
-)
+MODEL_NAME: Final[str] = os.environ.get("MODEL_NAME", "gpt-4o-mini")
 
 
 # --- Agent wrapper ---------------------------------------------------------------
