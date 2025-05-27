@@ -1,0 +1,155 @@
+Generate 50 random combinations of (recipe preference, user persona,
+scenario) for a recipe generation chatbot assistant.
+The dimensions are:
+
+Dimensions:
+
+Recipe Preferences: User preferences which may or may not be specified in the user's query. Pick at least 3 of these preferences.
+Possible values include (not exhaustive and actual values should be widely varied):
+- Ingredients available
+    - spinach
+    - tomatoes
+    - onions
+    - garlic
+    - mushrooms
+    - chicken
+    - beef
+    - pork
+    - lamb
+    - fish
+    - fried rice
+    - etc.
+- Cuisine
+    - Italian
+    - Japanese
+    - Thai
+    - Irish
+    - Mexican
+    - Indian
+    - French
+    - German
+    - Spanish
+    - etc.
+- Complementary to existing dish or side dish
+    - Fettuccine Alfredo
+    - Chicken Tikka Masala
+    - Spicy Chicken Stir Fry
+    - Roasted Chicken
+    - Mashed Potatoes
+    - Macaroni and Cheese
+    - Chicken Wings
+    - Fruit Smoothie
+    - etc.
+- Dietary Restrictions
+    - Vegan
+    - Vegetarian
+    - Gluten-free
+    - Dairy-free
+    - Paleo
+    - Keto
+    - Sugar-free
+    - Low-sodium
+    - Low-cholesterol
+    - etc.
+- Fitness Goals
+    - Weight loss
+    - Muscle building
+    - Speed
+    - Powerlifting
+    - Bodybuilding
+    - Crossfit
+    - Endurance
+    - Strength
+    - Flexibility
+    - Balance
+    - etc.
+- Cultural Style
+    - Italian
+    - Japanese
+    - Thai
+    - Irish
+    - Mexican
+    - Indian
+    - French
+    - German
+    - Spanish
+    - etc.
+- Recipe Type
+    - Main course
+    - Side dish
+    - Dessert
+    - Snack
+    - etc.
+- Recipe Difficulty
+    - Easy
+    - Medium
+    - Hard
+    - etc.
+- Recipe Time
+    - less than 30 minutes
+    - 30 minutes to 1 hour
+    - 1 hour to 2 hours
+    - more than 2 hours
+    - etc.
+- Recipe Cost
+    - under $10
+    - under $25
+    - under $50
+    - under $100
+    - etc.
+- Recipe Health
+    - Healthy
+    - Comfort food
+    - etc.
+- Recipe Season
+    - Spring
+    - Summer
+    - Fall
+    - Winter
+    - etc.
+- Recipe Occasion
+    - Everyday
+    - Special occasion
+    - Holiday
+    - Party
+    - Dinner party
+    - Religious holiday
+    - Religious milestone (e.g. First Communion, Confirmation, etc.)
+    - Birthday
+    - Anniversary
+    - Wedding
+    - Baby shower
+    - Bridal shower
+    - Baby shower
+    - etc.
+- Skill Level
+    - Beginner-friendly
+    - Intermediate
+    - Advanced
+    - Expert
+    - etc.
+
+User Persona: Who is asking for the recipe.
+Possible values:
+- Mother of 4
+- Single dude living alone
+- Newlywed
+- Newborn parent
+- Single parent
+- Busy professional
+- Senior citizen
+- Professional chef
+- Home cook
+- Foodie
+- Professional athlete
+- etc.
+
+Scenarios: How well-formed or challenging the user's request is.
+Possible values:
+- exact match (clearly specified and feasible),
+- ambiguous intent (unclear or underspecified),
+- shouldn't be handled (invalid or out-of-scope).
+
+Output each combination in the format: (recipe preference, user persona, scenario)
+Avoid duplicates. Vary values across dimensions. The goal is
+to create a diverse set of queries for our assistant.
